@@ -21,6 +21,9 @@ from app.operations import Add, OperationFactory
         ("root", 16, -2, 0.25),
         ("modulus", 7, 3, 1),
         ("int_divide", 7, 2, 3),
+        ("int_divide", -7, 2, -3),
+        ("int_divide", 7, -2, -3),
+        ("int_divide", -7, -2, 3),
         ("percent", 25, 200, 12.5),
         ("abs_diff", 2, 7, 5),
         ("abs_diff", 7, 2, 5),
@@ -46,6 +49,7 @@ def test_operation_results(name, a, b, expected):
         ("power", 0, -1),
         ("power", 1e308, 2),
         ("multiply", 1e308, 1e308),
+       
     ],
 )
 def test_invalid_calculations(name, a, b):

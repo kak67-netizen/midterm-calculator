@@ -69,7 +69,7 @@ class Modulus(Operation):
 
 class IntegerDivide(Operation):
     def calculate(self, a, b):
-        return a // b
+        return math.trunc(a / b)
 
 
 class Percentage(Operation):
